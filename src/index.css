@@ -1,4 +1,7 @@
 img {
-  width: 25%;
+  width: 90%;
 }
-kjnjn
+.maindiv {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
