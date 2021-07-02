@@ -5,3 +5,8 @@ img {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
+.item {
+  grid-template-columns: repeat(3, 1fr);
+  color: red;
+  border: 1px solid black;
+}

@@ -3,7 +3,7 @@ import "./index.css";
 import ReactDom from "react-dom";
 import { firstBook } from "./nav";
 import { Clickbutton } from "./clickbutton";
-import { Loopdata } from "./loopdata";
+import Loopdata from "./loopdata";
 
 //const namearry = ["qdsdsd", "sdsds"];
 //const listItems = namearry.map((namee) => {
