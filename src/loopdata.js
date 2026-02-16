@@ -1,24 +1,28 @@
-import React from "react";
-import { firstBook } from "./nav";
-const Loopdata = () => {
-  const [people, setPeople] = React.useState(firstBook);
-  const removeItem = (id) => {
-    let newPeople = people.filter((person) => person.id !== id);
-    setPeople(newPeople);
-  };
-  return (
-    <>
-      {people.map((person) => {
-        const { id, name } = person;
-        return (
-          <div key={id} className="item">
-            <h4>{name}</h4>
-            <button onClick={() => removeItem(id)}>remove</button>
-          </div>
-        );
-      })}
-    </>
-  );
-};
+import React, { useState } from 'react';
 
-export default Loopdata;
+export default function ListExample() {
+  const [items, setItems] = useState(['Learn JSX', 'Components', 'State & Props']);
+  const [text, setText] = useState('');
+  const add = () => {
+    if (!text.trim()) return;
+    setItems((s) => [text.trim(), ...s]);
+    setText('');
+  };
+  const removeAt = (i) => setItems((s) => s.filter((_, idx) => idx !== i));
+  return (
+    <div>
+      <div style={{display:'flex',gap:8,marginBottom:8}}>
+        <input placeholder="Add topic" value={text} onChange={(e)=>setText(e.target.value)} />
+        <button onClick={add}>Add</button>
+      </div>
+      <div>
+        {items.map((it, idx) => (
+          <div className="item" key={idx}>
+            <h4>{it}</h4>
+            <button onClick={() => removeAt(idx)}>Remove</button>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}

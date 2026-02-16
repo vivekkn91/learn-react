@@ -1,32 +1,11 @@
-export const firstBook = [
-  {
-    id: 1,
-    pic: "https://www.extremetech.com/wp-content/uploads/2019/12/SONATA-hero-option1-764A5360-edit.jpg",
-    name: "vivek",
-    age: "male",
-  },
-  {
-    id: 2,
-    pic: "https://www.extremetech.com/wp-content/uploads/2019/12/SONATA-hero-option1-764A5360-edit.jpg",
-    name: "ram",
-    age: "male",
-  },
-  {
-    id: 3,
-    pic: "https://www.extremetech.com/wp-content/uploads/2019/12/SONATA-hero-option1-764A5360-edit.jpg",
-    name: "lak",
-    age: "male",
-  },
-  {
-    id: 4,
-    pic: "https://www.extremetech.com/wp-content/uploads/2019/12/SONATA-hero-option1-764A5360-edit.jpg",
-    name: "lak",
-    age: "male",
-  },
-  {
-    id: 5,
-    pic: "https://www.extremetech.com/wp-content/uploads/2019/12/SONATA-hero-option1-764A5360-edit.jpg",
-    name: "ram",
-    age: "male",
-  },
-];
+import React from 'react';
+
+export default function Nav() {
+  return (
+    <nav className="nav">
+      <a href="/">Home</a>
+      <a href="/docs">Docs</a>
+      <a href="https://reactjs.org" target="_blank" rel="noreferrer">reactjs.org</a>
+    </nav>
+  );
+}

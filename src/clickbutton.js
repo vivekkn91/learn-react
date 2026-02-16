@@ -1,19 +1,15 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-export const Clickbutton = () => {
-  const [state, setstate] = useState("clickbutton to see my name");
-  const changeButton = () => {
-    if (state == "clickbutton to see my name") {
-      setstate("sdhd");
-    } else {
-      setstate("clickbutton to see my name");
-    }
-  };
-
+export default function Counter() {
+  const [count, setCount] = useState(0);
   return (
     <div>
-      <h1>{state}</h1>
-      <button onClick={changeButton}>click me</button>
+      <p>Current count: <strong>{count}</strong></p>
+      <div style={{display:'flex',gap:8}}>
+        <button onClick={() => setCount((c) => c - 1)}>-</button>
+        <button onClick={() => setCount((c) => c + 1)}>+</button>
+        <button onClick={() => setCount(0)}>Reset</button>
+      </div>
     </div>
   );
-};
+}

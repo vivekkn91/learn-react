@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# React Starter — Learn by Building
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository is a compact, beginner-friendly React starter. It includes small, focused example components grouped as modules so new learners can explore, edit, and extend each piece independently.
 
-## Available Scripts
+Quick start
 
-In the project directory, you can run:
+1. Install deps:
 
-### `npm start`
+```bash
+npm install
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+2. Start the dev server:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```bash
+npm start
+```
 
-### `npm test`
+Open http://localhost:3000 in your browser.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+What this project contains
 
-### `npm run build`
+- `src/components/` — modular example components:
+	- `NavBar` — simple navigation bar
+	- `Counter` — stateful counter using `useState`
+	- `TodoList` — add/remove list items (practice lists and keys)
+	- `PropsExample` — shows how to pass props to components
+	- `FormExample` — controlled input and form submission
+- `src/App.js` — composes the examples into a readable layout
+- `src/index.js` — app entry
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+How the modules help you learn
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Each component lives in `src/components/` so you can open a single file and understand one concept at a time.
+- There's a barrel file `src/components/index.js` that demonstrates how to group and export modules; you can import from a single path: `import { Counter } from './components'`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Suggested beginner exercises
 
-### `npm run eject`
+- Edit `Counter` to add a step input (increase/decrease by a custom amount).
+- Extend `TodoList` to persist items to `localStorage` so they survive page reloads.
+- Add a detail view: clicking a list item shows more information in a modal.
+- Add a theme toggle (light/dark) using React Context.
+- Replace the static `NavBar` links with React Router and build multiple routes.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Notes & tips
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Use the browser console to see warnings (React gives helpful hints).
+- Try small changes and save — the dev server reloads automatically.
+- When you’re ready, run `npm run build` to create a production bundle.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Want me to do more?
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- I can wire up `localStorage` persistence, add React Router, or commit these changes to a new branch and open a PR. Tell me which next step you want.
